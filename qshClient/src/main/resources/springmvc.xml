@@ -20,5 +20,23 @@
         <property name="prefix" value="/WEB-INF/view/"></property>  
         <property name="contentType" value="text/html"></property>  
     </bean> 
+    
+    <bean id="xmemCachedBuilder" class="net.rubyeye.xmemcached.XMemcachedClientBuilder">
+		<constructor-arg>
+			<value>127.0.0.1:11211</value>
+		</constructor-arg>
+		<property name="connectionPoolSize" value="50" />
+		<property name="commandFactory">
+			<bean class="net.rubyeye.xmemcached.command.TextCommandFactory"></bean>
+		</property>
+		<property name="sessionLocator">
+			<bean class="net.rubyeye.xmemcached.impl.KetamaMemcachedSessionLocator"></bean>
+		</property>
+		<property name="transcoder">
+			<bean class="net.rubyeye.xmemcached.transcoders.SerializingTranscoder"></bean>
+		</property>
+	</bean>
+	<bean id="memcachedClient" factory-bean="xmemCachedBuilder"
+		factory-method="build" destroy-method="shutdown"></bean>
 	
 </beans>
