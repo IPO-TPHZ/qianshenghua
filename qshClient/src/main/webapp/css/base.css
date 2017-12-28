@@ -277,7 +277,7 @@ img {
     display: inline-block;
     width: 250px;
     height: 43px;
-    background: url(../images/t-logo.png);
+    background: url(../img/t-logo.png);
     margin-top: 10px;
     float: left;
 }
@@ -453,7 +453,7 @@ img {
 }
 
 .login-menu i.icon-tutor {
-    background-image: url(../images/icons.png);
+    background-image: url(../img/icons.png);
     background-position: 0 -180px;
 }
 
@@ -714,7 +714,7 @@ img {
 }
 
 
-/*登录弹框*/
+/*鐧诲綍寮规*/
 
 .u-login .ui-dialog-close {
     position: absolute;
@@ -995,7 +995,7 @@ img {
 }
 
 
-/* 普通翻页器-默认居中 */
+/* 鏅�氱炕椤靛櫒-榛樿灞呬腑 */
 
 .page-nav {
     margin: 30px 0;
@@ -1083,21 +1083,21 @@ img {
 }
 
 
-/* 居左 */
+/* 灞呭乏 */
 
 .page-nav-lt {
     text-align: left;
 }
 
 
-/* 居右 */
+/* 灞呭彸 */
 
 .page-nav-rt {
     text-align: right;
 }
 
 
-/* 较小 */
+/* 杈冨皬 */
 
 .page-nav-sm {
     line-height: 22px;
@@ -1116,7 +1116,7 @@ img {
 }
 
 
-/* 分离 */
+/* 鍒嗙 */
 
 .page-nav-sr a,
 .page-nav-sr i {
@@ -1227,7 +1227,7 @@ img {
 }
 
 
-/*鼠标hover title 提示插件*/
+/*榧犳爣hover title 鎻愮ず鎻掍欢*/
 
 .popover {
     position: absolute;
@@ -1340,7 +1340,7 @@ img {
 }
 
 
-/* 全局样式 */
+/* 鍏ㄥ眬鏍峰紡 */
 
 .mod_fa {
     font-family: Arial;
@@ -1399,12 +1399,12 @@ img {
 
 /*============  
 
-    页面所有弹框
+    椤甸潰鎵�鏈夊脊妗�
 
     =================*/
 
 
-/* 登录的弹框 */
+/* 鐧诲綍鐨勫脊妗� */
 
 .dio_login {
     height: 380px;
@@ -1519,7 +1519,7 @@ img {
     width: 20px;
     height: 22px;
     display: inline-block;
-    background: url(../images/login_icon.png) no-repeat;
+    background: url(../img/login_icon.png) no-repeat;
     background-position: -1px -211px;
     top: 5px;
     position: relative;
@@ -1584,7 +1584,7 @@ img {
     width: 20px;
     height: 22px;
     display: inline-block;
-    background: url(../images/login_icon.png) no-repeat;
+    background: url(../img/login_icon.png) no-repeat;
     display: inline-block;
     background-position: -3px -146px;
 }
@@ -1625,7 +1625,7 @@ img {
     width: 20px;
     height: 22px;
     display: inline-block;
-    background: url(../images/login_icon.png) no-repeat;
+    background: url(../img/login_icon.png) no-repeat;
     display: inline-block;
     background-position: -3px -146px;
 }
@@ -1686,7 +1686,7 @@ img {
 }
 
 
-/*  找回密码框 */
+/*  鎵惧洖瀵嗙爜妗� */
 
 .diol_pwd {
     width: 500px;
@@ -1799,7 +1799,7 @@ img {
 }
 
 
-/* 修改成功的提示框 */
+/* 淇敼鎴愬姛鐨勬彁绀烘 */
 
 .dio_edit_img {
     display: block;
@@ -1821,7 +1821,7 @@ img {
 }
 
 
-/* 图形验证码 */
+/* 鍥惧舰楠岃瘉鐮� */
 
 .dio_tcode {
     width: 170px;
@@ -2470,7 +2470,7 @@ img {
 
 .fixed-shop a.floor_hot {
     border-top-left-radius: 10px;
-    background: url(../images/order/hot_icon.png) no-repeat center center;
+    background: url(../img/order/hot_icon.png) no-repeat center center;
     border-top: none;
 }
 
@@ -2504,21 +2504,21 @@ img {
     margin: 0 auto;
     height: 80px;
     width: 80px;
-    background: url(../images/2017/e_icon.png) no-repeat 0px -88px;
+    background: url(../img/2017/e_icon.png) no-repeat 0px -88px;
 }
 
 .paper_step3_icon {
     margin: 0 auto;
     height: 80px;
     width: 80px;
-    background: url(../images/2017/e_icon.png) no-repeat 0px -174px;
+    background: url(../img/2017/e_icon.png) no-repeat 0px -174px;
 }
 
 .paper_step3_icon_done {
     margin: 0 auto;
     height: 80px;
     width: 80px;
-    background: url(../images/2017/e_icon.png) no-repeat 0px -260px;
+    background: url(../img/2017/e_icon.png) no-repeat 0px -260px;
 }
 
 .paper_step1_icon_done {
@@ -2682,7 +2682,7 @@ img {
     padding: 10px;
 }
 
-/* 实名认证引导 */
+/* 瀹炲悕璁よ瘉寮曞 */
 .guide-cert{background: #fff;width: 900px;padding: 30px 50px;}
 .guide-cert h2{font-size: 24px;padding-bottom: 10px;}
 .guide-cert h2 i{font-size: 14px;color: #FFB002;}
@@ -2720,7 +2720,7 @@ img {
 .guide-cert-back p{position: relative;font-size: 40px;text-align: center;color: #D74F4F;padding-top: 160px;}
 .guide-cert-back a{position: relative;}
 
-.u-desk{height: 38px;width: 232px;border: 1px solid #FFCD4C;background: url('../images/u-desk.png') 14px 50% no-repeat;margin-bottom: 10px;border-radius: 4px;line-height: 38px;cursor: pointer;}
+.u-desk{height: 38px;width: 232px;border: 1px solid #FFCD4C;background: url('../img/u-desk.png') 14px 50% no-repeat;margin-bottom: 10px;border-radius: 4px;line-height: 38px;cursor: pointer;}
 .u-desk p{color: #B68E50;padding-left: 50px;}
 .u-desk p span{color: #989898}
 .diol_pwd-loading {
