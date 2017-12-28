@@ -16,27 +16,29 @@
 	
 	<context:component-scan base-package="com.lxit.qshclient" />
 	
+	<mvc:annotation-driven />
+	
 	<bean  class="org.springframework.web.servlet.view.InternalResourceViewResolver">  
         <property name="prefix" value="/WEB-INF/view/"></property>  
         <property name="contentType" value="text/html"></property>  
-    </bean> 
+    </bean>
     
-    <bean id="xmemCachedBuilder" class="net.rubyeye.xmemcached.XMemcachedClientBuilder">
-		<constructor-arg>
-			<value>127.0.0.1:11211</value>
-		</constructor-arg>
-		<property name="connectionPoolSize" value="50" />
-		<property name="commandFactory">
-			<bean class="net.rubyeye.xmemcached.command.TextCommandFactory"></bean>
-		</property>
-		<property name="sessionLocator">
-			<bean class="net.rubyeye.xmemcached.impl.KetamaMemcachedSessionLocator"></bean>
-		</property>
-		<property name="transcoder">
-			<bean class="net.rubyeye.xmemcached.transcoders.SerializingTranscoder"></bean>
+    
+    <bean class="org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter">
+		<property name="messageConverters">
+			<list>
+				<ref bean="mappingJacksonHttpMessageConverter" />
+			</list>
 		</property>
 	</bean>
-	<bean id="memcachedClient" factory-bean="xmemCachedBuilder"
-		factory-method="build" destroy-method="shutdown"></bean>
-	
+    
+    <bean id="mappingJacksonHttpMessageConverter"
+		class="org.springframework.http.converter.json.MappingJackson2HttpMessageConverter">
+		<property name="supportedMediaTypes">
+			<list>
+				<value>application/json;charset=UTF-8</value>
+			</list>
+		</property>
+	</bean>
+    
 </beans>
