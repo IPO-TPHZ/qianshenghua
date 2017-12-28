@@ -54,7 +54,7 @@ function _error(invest) {
 	var smsMobile=$('#smsMobile').val();
 	alert(sms_number);
 	if(money<invest){
-		zeroModal.error('最低起投资金为100元!');
+		zeroModal.error('最低起投资金为'+invest+'元!');
 	}else if(sms_job==0){
 		zeroModal.error('请先获取短信验证!');
 	}else if(smsMobile==""){
