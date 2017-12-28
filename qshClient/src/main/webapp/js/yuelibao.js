@@ -10,17 +10,15 @@ $(function(){
 })
 
 var setIn=null;
-var color=$('#smsBtn').css('line-height');
+var color=$('#smsBtn').css('background');
 var sms_number=0;
+var sms_job=0;
 
 function _smsBtn(){
-	
-	setTimeout("_smsBtn2()", "400");
-}
 
-function _smsBtn2(){
-	if(color!="19.2px"){
+	if(sms_number==0){
 		sms_number=1;
+		sms_job=1;
 		$('#smsBtn').css("background","#ccc");
 		$('#smsBtn').css("color","#fff");
 		$('#smsBtn').css("line-height","1.2");
@@ -44,19 +42,20 @@ function time(){
 		$('#smsBtn').css("color","#FFB002");
 		$('#smsBtn').css("line-height","2.4");
 		$('#smsBtn').html("免费获取");
+		sms_number=0;
 	}else {
 		i--;
 		$('#job').text(i);
 	}
 }
 
-function _error() {
+function _error(invest) {
 	var money=$('#money').val();
 	var smsMobile=$('#smsMobile').val();
 	alert(sms_number);
-	if(money<100){
+	if(money<invest){
 		zeroModal.error('最低起投资金为100元!');
-	}else if(sms_number==0){
+	}else if(sms_job==0){
 		zeroModal.error('请先获取短信验证!');
 	}else if(smsMobile==""){
 		zeroModal.error('请输入验证码!');
