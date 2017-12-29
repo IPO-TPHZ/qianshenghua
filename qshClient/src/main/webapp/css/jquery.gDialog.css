@@ -8,6 +8,31 @@
   z-index: 9999;
   font-size: 16px; }
 
+
+.gdialog-my {
+    position: relative;
+    _position: absolute;
+    float: right;
+    top: 13px;
+    right: 13px;
+    _height: 26px;
+    font-size: 21px;
+    font-weight: bold;
+    line-height: 1;
+    color: red;
+    text-shadow: 0 1px 0 red;
+    opacity: .2;
+    filter: alpha(opacity=20);
+    cursor: pointer;
+    background: red;
+    _background: red;
+    border: 0;
+/*    -webkit-appearance: none;
+    -webkit-transition: all .3s ease-out ;
+    -o-transition: all .3s ease-out ;
+    transition: all .3s ease-out;*/
+}
+
 .gdialog-wrap {
   width: 100%;
   height: auto;
