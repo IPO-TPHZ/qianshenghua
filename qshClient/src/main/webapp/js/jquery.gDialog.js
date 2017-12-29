@@ -53,7 +53,6 @@
     m.tplBase += "<div class=\"gdialog-container\">";
     m.tplBase += "{{HEADER}}";
     m.tplBase += "<div class=\"gdialog-content\">{{message}}{{INPUT}}</div>";
-    m.tplBase += "<div class=\"gdialog-button-group\">{{BUTTON_CANCEL}} <button class=\"button button-ok\">Ok</button></div>";
     m.tplBase += "</div>";
     m.tplBase += "</div>";
 
