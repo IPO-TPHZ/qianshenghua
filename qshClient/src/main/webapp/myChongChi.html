@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>充值-快捷充值</title>
+		    <link rel="stylesheet" href="css/base.css">
+		    <link rel="stylesheet" href="css/usercenter.css">
+		    <link rel="stylesheet" href="css/ui-dialog.css">
+			<link rel="stylesheet" href="css/center-dialog.css">
+	</head>
+	<body>
+		       <!-- 右侧栏S -->
+            <div class="fixed-height-right">
+            <div class="mod_col_right">
+            <div class="wrapper">
+                <div class="tab-content">
+                    <ul class="tab">
+                        <li><a href="#"></a></li>
+                        
+                        	<li class="current"><a href="#">快捷充值</a></li>
+                        
+                    </ul>
+                </div>
+                <div class="tab-content-wrap">
+                    <div class="plat-form" id="form">
+                        <table>
+                            <tbody>
+                                <tr>
+                                <td class="label">银行卡号</td>
+                                <td>
+                                <input type="hidden" id="bankId" value="472190778">
+                                    <p class="text" id="bankTxt">建设银行（尾号 6514）</p>
+                                </td>
+                            </tr>
+                            
+                            
+                            <tr>
+                                <td class="label">充值金额</td>
+                                <td><input type="text" class="txt" id="amount" placeholder="请输入充值金额"></td>
+                            </tr>
+                            <tr>
+                                <td class="label">短信验证码</td>
+                                <td>
+                                    <input class="txt txt-min" id="code" type="text" placeholder="请输入验证码">
+                                    <a id="getCodeBtn" class="input-btn mod_cbtn" href="javascript:;">获取验证码</a>
+                                    <input type="hidden" id="token" value="">
+									<input type="hidden" id="externalRefNumber" value="">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>
+                                    <a href="javascript:;" class="mod_submit" id="submit">确 认</a>
+                                    <p class="error" id="error"></p>
+                                </td>
+                            </tr>
+                            
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="tip-list">
+                        <dl>
+                            <dt>温馨提示：</dt>
+                            <dd>1.所有投标保证金由第三方平台托管。</dd>
+                            <dd>2.请注意您的银行卡充值限制，以免造成不便。</dd>
+                            <dd>3.如果充值金额没有及时到账，请和客服联系。</dd>
+                            <dd class="last">如有问题，请与我们联系</dd>
+                        </dl>
+                    </div>
+
+                </div>
+            </div>
+			</div>
+
+            </div>
+	</body>
+</html>

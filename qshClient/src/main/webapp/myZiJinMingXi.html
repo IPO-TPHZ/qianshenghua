@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>资金明细</title>
+		    <link rel="stylesheet" href="css/base.css">
+		    <link rel="stylesheet" href="css/center.css">    
+		    <link rel="stylesheet" href="css/jquery-ui-1.10.1.css">    
+		    <link rel="stylesheet" href="css/usercenter.css">
+		    <link rel="stylesheet" href="css/ui-dialog.css">
+		    <link rel="stylesheet" href="css/custody.css">
+	</head>
+	<body>
+		    <!-- 右侧栏S -->
+    <div class="mod_col_right">                
+        <!-- 日期选择 S -->
+        <div class="mod_date mod_date_ssl" style="margin-top: 0px;">
+            <span class="mod_date_tit">选择日期 ：</span>
+            <div class="mod_date_picker">
+                <input type="text" placeholder="开始时间" autocomplete="off" id="date-picker-input-1" class="mod_date_start hasDatepicker">
+                <input type="text" class="mod_date_end hasDatepicker" autocomplete="off" id="date-picker-input-2" placeholder="结束时间">
+            </div>
+            <div class="mod_date_sel">
+                <a href="javascript:;">一个月内</a>
+                <a href="javascript:;">三个月内</a>
+                <a href="javascript:;">半年内</a>
+            </div>
+            <div class="mod_date_e">
+                <span class="mod_date_tit">类型 ：</span>
+                <a href="javascript:;" class="mod_recharge cur">全部</a>
+                <a href="javascript:;" class="mod_recharge">充值</a>
+                <a href="javascript:;" class="mod_recharge">提现</a>
+                <a href="javascript:;" class="mod_recharge">购买</a>
+                <a href="javascript:;" class="mod_recharge">赎回</a>
+                <a href="javascript:;" class="mod_recharge">收益</a>
+                <a href="javascript:;" class="mod_recharge">奖励</a>
+            </div>
+        </div>
+        <!-- 日期选择 E -->
+        <!-- 列表 S -->
+        <div class="mlib_list">
+            <div class="mlib_list_cont hide">
+                 <table>
+                    <tbody><tr>
+                        <th width="120">编号</th>
+                        <th width="204">交易时间</th>
+                        <th width="101">类型</th>
+                        <th width="91">金额</th>
+                        <th width="274" style="text-align:center;">卡号</th>
+                        <th width="83">状态</th>
+                    </tr>
+                    <!--repeat4413881311--><tr>
+                        <td></td>
+                        <td></td>
+                        <td><span></span></td>
+                        <td class="fa mlib_org">￥</td>
+                        <td align="center"></td>
+                        <td><span></span></td>
+                    </tr><!--repeat4413881311:end-->
+                    <!--ms-if-->
+                </tbody></table>
+            </div>
+            <div class="mlib_list_cont hide show">
+                 <table>
+                    <tbody><tr>
+                        <th width="120">交易号</th>
+                        <th width="204">交易时间</th>
+                        <th width="101">类型</th>
+                        <th width="91">交易金额</th>
+                        <th width="274" style="text-align:center;">交易说明</th>
+                        <th width="83">状态</th>
+                    </tr>
+                    <!--repeat65442707463--><tr>
+                        <td><span>949997</span></td>
+                        <td>2017-12-25 10:09</td>
+                        <td>充值</td>
+                        <td class="fa mlib_org">+100000.00</td>
+                        <td align="center"><span>尾号6514充值</span></td>
+                        <td><span>充值失败</span></td>
+                    </tr><!--repeat65442707463:end-->
+                    <!--ms-if-->
+                </tbody></table>
+            </div>
+            <!-- 分页 S -->
+            <div class="mod_page hide show">
+                <div avalonctrl="pager663371974093" style="display: block;"><div class="mod_page_list" onselectstart="return false;" unselectable="on" style="display: inline-block;">
+    <a href="javascript:;" class="mod_page_first oni-state-disabled" title="跳转到 上一页">上一页</a>
+    <a href="javascript:;" title="当前页" class="cur" style="display: none;">1</a>
+    <!--ms-if-->
+    <!--repeat14445099732--><a href="javascript:;" title="当前页" class="cur">1</a><!--repeat14445099732--><!--repeat14445099732:end-->
+    <!--ms-if-->
+    <a href="javascript:;" title="当前页" style="display: none;">1</a>
+    <a href="javascript:;" class="mod_page_last oni-state-disabled" title="跳转到 下一页">下一页</a>
+
+</div>
+<div class="mod_page_jump" style="display: inline-block;">
+    <input type="text" value="到第二页" data-duplex-event="change">
+    <a href="javascript:;">跳转</a>
+</div>
+</div>
+            </div>
+            <!-- 分页 E-->
+        </div>
+        <!-- 列表 E -->
+    </div>
+	</body>
+</html>
