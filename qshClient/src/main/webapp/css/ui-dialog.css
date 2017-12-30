@@ -94,20 +94,21 @@
     position: relative;
     _position: absolute;
     float: right;
-    top: 13px;
-    right: 13px;
+    top: 10px;
+    right: 0px;
     _height: 26px;
-    padding: 0 4px;
+/*     padding: 0 4px; */
     font-size: 21px;
     font-weight: bold;
+    font-color:red;
     line-height: 1;
-    color: #000;
-    text-shadow: 0 1px 0 #FFF;
-    opacity: .2;
+    color: red;
+    text-shadow: 0 1px 0 red;
+/*     opacity: .2; */
     filter: alpha(opacity=20);
     cursor: pointer;
     background: transparent;
-    _background: #FFF;
+    _background: red;
     border: 0;
 /*    -webkit-appearance: none;
     -webkit-transition: all .3s ease-out ;
@@ -116,7 +117,7 @@
 }
 .ui-dialog-close:hover,
 .ui-dialog-close:focus {
-    color: #000000;
+    color: red;
     text-decoration: none;
     cursor: pointer;
     outline: 0;

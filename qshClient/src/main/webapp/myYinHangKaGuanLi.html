@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>银行卡管理</title>
+		<link rel="stylesheet" href="css/base.css">
+	    <link rel="stylesheet" href="css/center.css">    
+	    <link rel="stylesheet" href="css/jquery-ui-1.10.1.css">    
+	    <link rel="stylesheet" href="css/usercenter.css">
+	    <link rel="stylesheet" href="css/ui-dialog.css">
+	    <link rel="stylesheet" href="css/custody.css">
+	</head>
+	<body>
+	<div class="fixed-height-right" ui-view="" data-current-cache="false">
+      <div avalonctrl="bankCtrl">
+    <link rel="stylesheet" href="css/replaceBank.css">
+    <div class="mod_col_right">
+        <!-- 绑卡页面 S -->
+        <div class="card_tab">
+            <a href="javascript:;">绑定银行卡</a>
+        </div>
+        <div class="card_main">
+            <!-- 未绑卡的显示 S -->
+            <div class="loading-gif" style="display:none">
+                <img src="./银行卡管理_files/loading.gif" alt="" width="64" height="64">
+                <p>努力加载中...</p>
+            </div>
+            <!--ms-if-->
+            <!--未绑卡的显示 E -->
+            <!-- 已绑卡的显示 S -->
+            <div class="card_form clearfix show" style="display:none">
+                <div class="card_group clearfix">
+                    <div class="card_tit">开户银行</div>
+                    <div class="card_input">
+                        建设银行
+                    </div>
+                </div>
+                <div class="card_group hide">                    
+                <div class="card_tit">银行地址</div>
+                    <div class="card_input">
+                        安徽省天长市
+                    </div>
+                </div>
+                <div class="card_group">
+                    <div class="card_tit">支行名称</div>
+                    <div class="card_input">
+                        建设银行
+                    </div>
+                </div>
+                <div class="card_group">
+                    <div class="card_tit">银行卡号</div>
+                    <div class="card_input">
+                        62170***********514
+                    </div>
+                </div>
+                <div class="card_group show" style="display:none">
+                    <div class="card_tit">手机号码</div>
+                    <div class="card_input">
+                        176*****832
+                    </div>
+                </div>
+                <div class="card_group">
+                    <div class="card_tit"></div>
+                    <div class="card_input">
+                        <ul>
+                            <li>
+                                <a href="javascript:;" class="mod_submit card_btn">更换银行卡</a>
+                                <b class="help-tip" ptitle="无在投产品与账号余额快速通道"></b>
+                            </li>
+                            <li>
+                                <a href="javascript:;" class="card_btn_gray">银行卡丢失/注销</a>
+                                <b class="help-tip" ptitle="银行卡升级等特殊问题处理通道"></b>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="card_tips">
+                <div class="card_tips_ttl">温馨提示：</div>
+                <p>1.根据国家相关规定，平台严禁信用卡充值和提现；</p>
+                <p>2.汇付充值方式仅适用于购买平台散标，不适用于购买投标产品；</p>
+                <p>3.网银充值方式适用于购买平台投标产品，不适用于购买散标；</p>
+                <p>4.快捷充值方式适用于购买平台投标产品，不适用于购买散标；同时快捷充值方式只允许绑定一张银行卡且要同卡进出；</p>
+                <p class="card_tips_notice">如有问题，请与我们联系。客服电话：4006078787</p>
+            </div>
+        </div>
+    </div>
+</div></div>
+	</body>
+</html>

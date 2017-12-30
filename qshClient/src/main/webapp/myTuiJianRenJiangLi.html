@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+	<title>推荐人奖励</title>
+	<link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/center.css">    
+    <link rel="stylesheet" href="css/jquery-ui-1.10.1(1).css">    
+    <link rel="stylesheet" href="css/usercenter.css">
+    <link rel="stylesheet" href="css/ui-dialog.css">
+    <link rel="stylesheet" href="css/custody.css">
+	</head>
+	<body>
+		    <!-- 右侧栏S -->
+    <div class="mod_col_right">
+        <div class="pro-exponent">
+            <ul>
+                <li><span>推荐人奖励总额（元）</span>
+                    <p class="cRed">0.00</p>
+                </li>
+                <li class="last"><span>已到账奖励（元）</span>
+                    <p class="cRed">0.00</p>
+                </li>
+                <li class="last"><span>待收奖励（元）</span>
+                    <p class="cRed">0.00</p>
+                </li>
+                <li class="last"><span>本月累计可获得奖励（元）</span>
+                    <p class="cRed">0.00</p>
+                </li>
+            </ul>
+        </div>
+
+        <div class="row-wrap clearfix" style="margin-top:20px;height: 430px;">
+            <h3 class="title">
+                如何获得奖励
+            </h3>
+            <div class="share-qe">
+                <div class="img">
+                    <img alt="" width="193" height="193" src="images/ewm_151338924289718.gif">
+                </div>
+                <div class="btns clearfix">
+                    <a target="_blank" href="images/ewm_151338924289718.gif">下载二维码</a>
+                    <a href="javascript:;" id="copy_button">复制链接分享</a>
+                    <input type="hidden" id="inviteUrl" name="url" value="http://www.qianshenghua.com/login/toReg.do?param=8359f33af4d8381d6e8662b6d7f37c27">
+                </div>
+                <div class="setting">
+                    <span>我的导师</span>
+                    <span id="advisor"></span>
+                    <span>
+                        <a href="javascript:;" ms-visible="!data.advisor.mobilePhone" style="display: inline;">设置</a>
+                        <a href="javascript:;" ms-visible="data.advisor.mobilePhone" style="display: none;">修改</a>
+                    </span>
+                </div>
+            </div>
+            <img class="reward-map" src="images/reward_map.png" alt="">
+        </div>
+
+        <div class="row-wrap">
+            <div class="filter-hd clearfix">
+                <h3 class="title">奖励记录</h3>
+                <div class="input">
+                	<select id="rewardType">
+                		<option value="0">奖励类型</option>
+                		<option value="1">注册奖励</option>
+                		<option value="2">投资奖励</option>
+                		<option value="3">导师奖励</option>
+                	</select>
+                    <input type="text" data-date-format="yyyy-mm" id="datepicker" value="" readonly="">
+                    <button id="searchBtn">查询</button>
+                    <i class="arrow"></i>
+                </div>
+            </div>
+
+            <div class="invite-wrap-in">
+                <div class="invite-data-list clearfix">
+                    <div class="item">
+                        <h3>推荐投资总金额（元）</h3>
+                        <p id="recommendInvestAmount">0.00</p>
+                    </div>                            
+                    <div class="item">
+                        <h3>邀请注册人数</h3>
+                        <p id="sumRegNum">0</p>
+                    </div>
+                    <div class="item item-last">
+                        <h3>推荐投资人数</h3>
+                        <p id="sumInvestNum">0</p>
+                    </div>
+                    <div class="item item-last">
+                        <h3>冻结金额</h3>
+                        <p id="freezeAmount">0</p>
+                    </div>
+                </div>
+                                        
+                	<!--ms-if-->
+                
+
+                <div class="pro-table invite-table">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th class="first">类型</th>
+                                <th>投资时间</th>
+<!--                                 <th>投资金额</th> -->
+                                <th>投资期数</th>
+                                <th>投资人</th>
+<!--                                 <th>投标师</th> -->
+                                <th>奖励金额</th>
+                                <th>状态</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!--repeat744716811363:end-->
+                            <tr><td colspan="8" align="center">查无数据</td></tr>
+    					</tbody>
+                    </table>
+                </div>
+            <div class="mod_page hide" id="pagenav">
+<!--                 <div class="mod_page_list">
+                    <a href="#"><i class="lib_icon lib_icon_left"></i></a>
+                    <a href="#" class="cur">1</a>
+                    <a href="#">2</a>
+                    <a href="#">3</a>
+                    <a href="#">4</a>
+                    <a href="#">5</a>
+                    <a href="#">6</a>
+                    <a href="#"><i class="lib_icon lib_icon_right"></i></a>
+                </div>
+                <div class="mod_page_jump">
+                    <input type="text" value="到第二页" />
+                    <a href="#">跳转</a>
+                </div> -->
+                <div avalonctrl="pager081785684323" style="display: block;"><div class="mod_page_list" onselectstart="return false;" unselectable="on" style="display: none;">
+    <a href="javascript:;" class="mod_page_first oni-state-disabled" title="跳转到 上一页">上一页</a>
+    <a href="javascript:;" title="当前页" class="cur" style="display: none;">1</a>
+    <!--ms-if-->
+    <!--repeat770795510623--><!--repeat770795510623:end-->
+    <!--ms-if-->
+    <a href="javascript:;" title="跳转到 最后一页" style="display: inline-block;">0</a>
+    <a href="javascript:;" class="mod_page_last" title="跳转到 下一页">下一页</a>
+<!--     <div class="oni-pager-jump" ms-if="showJumper">
+        <span class="oni-pager-text" ms-html="_getTotalPages(totalPages)"></span>
+        <div class="oni-pager-textbox-wrapper">
+            <input class="oni-pager-textbox" ms-duplex="_currentPage" data-duplex-event="change" ms-keyup="changeCurrentPage">
+        </div>
+        <span class="oni-pager-text">{{regional.pageText}}</span>
+        <button class="oni-pager-button" ms-click="changeCurrentPage" >{{regional.confirmText}}</button>
+    </div> -->
+</div>
+<div class="mod_page_jump" style="display: none;">
+    <input type="text" value="到第二页" data-duplex-event="change">
+    <a href="javascript:;">跳转</a>
+</div>
+</div>
+            </div>
+            </div>
+        </div>
+    </div>
+	</body>
+</html>

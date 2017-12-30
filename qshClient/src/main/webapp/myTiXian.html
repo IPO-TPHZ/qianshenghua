@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>提现</title>
+	<link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/usercenter.css">
+    <link rel="stylesheet" href="css/modalmin.css">
+    <link rel="stylesheet" href="css/ui-dialog.css">
+    	
+    </script><link rel="stylesheet" href="css/center-dialog.css">
+	</head>
+	<body>
+		
+		               <!-- 右侧栏S -->
+                <div class="fixed-height-right">
+                  <div class="mod_col_right">  
+                    <div class="col-wrap">
+                        <div class="title-bar clearfix">
+                            <h3>我要提现</h3>
+                            <a class="link" href="https://www.qianshenghua.com/view/center-index.jsp#!/trade/reword" target="_blank">提现记录</a>
+                        </div>
+                        
+                        <div class="plat-form" id="form">
+                        <input type="hidden" id="bank_card_id" value="472190778">
+                            <table>
+                                <tbody><tr>
+                                    <td class="label">银行开户名</td>
+                                    <td>
+                                        <p class="text">*银</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="label">可用余额</td>
+                                    <td><p class="text">0.00元</p></td>
+                                </tr>
+
+                                <tr>
+                                    <td class="label">提现银行</td>
+                                    <td><p class="text"><img class="bankLogo" src="images/jsyh.jpg"></p></td>
+                                </tr>
+                                <tr>
+                                    <td class="label">卡　　号</td>
+                                    <td><p class="text">62170***********514</p></td>
+                                </tr>
+                                
+                                
+                                    <tr>
+                                        <td class="label">支行名称</td>
+                                        <td><p class="text">建设银行</p><input type="hidden" id="detail_address" value="建设银行" placeholder="请输入支行名称"></td>
+                                        
+                                    </tr>
+                                
+                                <tr>
+                                    <td class="label">提现金额</td>
+                                    <td><input type="text" class="txt" id="withdrawMoney" value="" placeholder="请输入提现金额" oninput="judgeMoney()" onpropertychange="judgeMoney()">
+                                    </td>
+                                </tr>
+                                <!-- <tr>
+                                    <td class="label">支付密码</td>
+                                    <td><input type="text" class="txt" id="payPsw" placeholder="请输入支付密码"/></td>
+                                </tr> -->
+                                <tr>
+                                    <td class="label">短信验证码</td>
+                                    <td>
+                                        <input class="txt txt-min" id="code" type="text" placeholder="请输入验证码">
+                                        <a id="getCodeBtn" class="input-btn mod_cbtn" href="javascript:;">获取验证码</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td>
+                                        
+                                           
+                                           
+                                           
+                                               <div class="free-status">
+                                                   <p>本月有2次免费提现次数，还剩2次</p>
+                                               </div>
+                                           
+                                           
+                                        
+                                       <p>钱生花投标回报更高，周期更灵活，资金更安全。莫让钱生锈！<a href="https://www.qianshenghua.com/fund/market.do" class="plat_form_td">去投标&gt;&gt;</a></p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td>
+                                        <input id="receiveTime" type="hidden" value="1">
+                                        <a href="javascript:;" class="mod_submit with_btn" id="submit">确 认</a>
+                                        <p class="tip mod_dtips">为了提高提现速度，请尽量不要分笔提现。</p>
+                                        <p class="error" id="error"></p>
+                                    </td>
+                                </tr>
+                            </tbody></table>
+                        </div>
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        <div class="tip-list">
+                            <dl>
+                                <dt>温馨提示：</dt>
+                                <dd>1. 钱生花平台用户提现审核规则</dd>
+                                <dd class="tup">
+                                    (1) 提现金额&lt;10万，系统自动审核，到账时间：T+1个工作日；<br>
+                                    (2) 10万≤提现金额&lt;100万，提现申请人工审核后到账，到账时间：T+2个工作日；<br>
+                                    (3) 100万≤提现金额&lt;500万，提现申请人工审核后到账，到账时间：T+3个工作日；<br>
+                                    (4) 提现金额≥500万，需提前一周联系客服报备，提现申请审核通过后预计T+3工作日内到帐，到账时间：T+3个工作日；<br>
+                                    (5) 所有到账时间遇节假日顺延，详情欢迎拨打客户服务热线：400-607-8787；
+                                </dd>
+                                <dd>2. 请确保您银行帐号的户名和您在网站上认证的真实户名一致，信用卡不得设为提现账号。</dd>
+                                <dd>3. 每笔提现金额最高不能超过2000000元以上，每日提现金额最高不能超过50000000元以上。</dd>
+                                <dd>4. 每月2次提现免费，超出按3元/笔收取提现手续费。</dd>
+                                <dd class="last">5. 禁止提现到信用卡。</dd>
+                            </dl>
+                        </div>
+
+                    </div>
+                </div>  
+                </div>
+	</body>
+</html>

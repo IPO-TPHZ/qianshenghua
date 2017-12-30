@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>安全中心</title>
+	<link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/center.css">    
+    <link rel="stylesheet" href="css/jquery-ui-1.10.1.css">    
+    <link rel="stylesheet" href="css/usercenter.css">
+    <link rel="stylesheet" href="css/ui-dialog.css">
+    <link rel="stylesheet" href="css/custody.css">
+	</head>
+	<body>
+		<!-- 右侧栏S -->
+	<div class="mod_col_right">
+    <!-- 小钱库头 S -->
+    <div class="msafe">
+        <p class="fa msafe_phone">130*****268</p>
+        <p class="msafe_info" style="margin-top:22px;">建议您启动全部安全设置，以保障账户安全130*****268</p>
+       <!--  <p class="msafe_time">上次登录时间：2016-02-13 22:52:00  </p> -->
+    </div>
+    <div class="msafe_cointer">
+        <ul>
+            <!--ms-if-->        
+            <li>
+                <div class="msafe_item">
+                    <i class="safe_icon safe_icon_rz"></i>
+                    实名认证
+                </div>
+                <!--ms-if-->
+                <div class="msafe_opt">
+                    <a href="javascript:;" class="msafe_edit">去认证</a>
+                </div>
+            </li>
+            <li>
+                <div class="msafe_item">
+                    <i class="safe_icon safe_icon_sj safe_icon_sj_done" ms-class="safe_icon_sj_done:verify.user.mobilePhone!=&#39;&#39;"></i>
+                    手机认证
+                </div>
+                <div class="msafe_opt">
+                    <span>130*****268</span>
+                    <a href="javascript:;" class="msafe_edit">修改</a>
+                    <!--ms-if-->
+                </div>
+                <!--ms-if-->
+            </li>
+            <li>
+                <div class="msafe_item">
+                    <i class="safe_icon safe_icon_email"></i>
+                    电子邮箱
+                </div>
+                <!--ms-if-->
+                <div class="msafe_opt">
+                    <span></span>
+                    <a href="javascript:;" onclick="HHN.dialog.certEmail()" class="msafe_edit">去认证</a>
+                </div>
+            </li>
+
+            <!--ms-if-->
+
+            <li>
+                <div class="msafe_item">
+                    <i class="safe_icon safe_icon_dpwd_done"></i>
+                    登录密码
+                </div>
+                <div class="msafe_opt">
+                    <span>********</span>
+                    <a href="javascript:;" onclick="HHN.dialog.updateLoginPsw();" class="msafe_edit">修改</a>
+                </div>
+            </li>
+            <li>
+                <div class="msafe_item">
+                    <i class="safe_icon safe_icon_trade"></i>
+                    银行卡号
+                </div>
+                <!--ms-if-->
+                <!--ms-if-->
+                <div class="msafe_opt">
+                    <a class="msafe_edit" onclick="recharge(2, &#39;center&#39;);">去绑卡</a>
+                </div>
+            </li>
+            <!--ms-if-->            
+            <li>
+                <div class="msafe_item">
+                    <i class="safe_icon safe_icon_dpwd" ms-class="safe_icon_dpwd_done:verify.user.payPassword!=&#39;&#39;"></i>
+                    支付密码
+                </div>
+                <!--ms-if-->
+                <div class="msafe_opt">
+                    <a class="msafe_edit" href="javascript:;">设置</a>
+                </div>
+            </li>
+            <li>
+                <div class="msafe_item">
+                    <i class="safe_icon safe_icon_risk" ms-class="safe_icon_risk_done:verify.assess.assessType"></i>
+                    风险评估
+                </div>
+                <div class="msafe_opt">
+                    <span class="cGray">未评估</span>
+                    <span class="msafe_edit_btn">本月还可评估2次</span>
+                    <a class="msafe_edit" href="https://www.qianshenghua.com/view/riskTest.html">立即评估</a>
+                </div>
+                <!--ms-if-->
+            </li>
+        </ul>
+    </div>
+    <!-- 小钱库头 E-->
+    <script type="text/tpl" id="valDialog">
+        <div class="diol_pwd">
+            <div class="dio_close" i="close"></div>
+            <div class="diol_title">请输入图形验证码</div>
+            <div class="form_main">
+                <div class="dio_tc_p">
+                    <input type="text" id="dCode" class="dio_tcode">
+                    <img class="js-code diol_code_img diol_codes" src="https://www.qianshenghua.com/common/imageCode.do?pageId=userlogin" ptitle="还能获取6次，且点且珍惜"/>
+                </div>
+                <a href="javascript:;" class="diol_opt diol_opt_sure">确定</a>    
+            </div>
+        </div>
+    </script>
+</div>
+	</body>
+</html>

@@ -40,5 +40,16 @@
 			</list>
 		</property>
 	</bean>
+	
+	<!-- 将静态资源交由tomcat来处理 -->
+	<mvc:default-servlet-handler />
+
+	<!-- 注册类型转换器 -->
+	<mvc:annotation-driven />
+	
+	<mvc:view-controller path="/myWoDeZhangHu.html" view-name="myWoDeZhangHu.html" />	
+	<mvc:view-controller path="/personCenter" view-name="myGeRenZhongXin.html" />
+	
+	<!-- <mvc:resources mapping="/**"  location="/myWoDeZhangHu.html"/> -->
     
 </beans>

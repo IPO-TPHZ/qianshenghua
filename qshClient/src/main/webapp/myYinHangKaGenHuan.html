@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>银行卡更换</title>
+		<link rel="stylesheet" href="css/base.css">
+	    <link rel="stylesheet" href="css/center.css">    
+	    <link rel="stylesheet" href="css/jquery-ui-1.10.1.css">    
+	    <link rel="stylesheet" href="css/usercenter.css">
+	    <link rel="stylesheet" href="css/ui-dialog.css">
+	    <link rel="stylesheet" href="css/custody.css">
+	    <link rel="stylesheet" href="css/center-dialog.css">
+	    
+	</head>
+	<body>
+	                <div class="fixed-height-right" ui-view="" data-current-cache="false"><div avalonctrl="bankCtrl">
+    <link rel="stylesheet" href="./个人中心_银行卡更换_files/replaceBank.css">
+    <div class="mod_col_right">
+        <!-- 绑卡页面 S -->
+        <div class="card_tab">
+            <a href="javascript:;">绑定银行卡</a>
+        </div>
+        <div class="card_main">
+            <!-- 未绑卡的显示 S -->
+            <div class="loading-gif" style="display:none">
+                <img src="./个人中心_银行卡更换_files/loading.gif" alt="" width="64" height="64">
+                <p>努力加载中...</p>
+            </div>
+            <div class="card_form clearfix show" style="display:none">
+                <!--ms-if-->
+                <table class="upload-table">
+                    <tbody><tr>
+                        <td class="title">账户名</td>
+                        <td>
+                            *银
+                        </td>
+                    </tr>
+                    <tr class="pt10">
+                        <td class="title">身份证</td>
+                        <td>
+                            431121**********11
+                        </td>
+                    </tr>
+                    <tr class="pt10">
+                        <td>开户银行</td>
+                        <td>
+                            <select class="input" id="bankName">
+                                <option value="-1">请选择银行</option>
+                                <option value="BOC">中国银行</option>
+                                <option value="ABC">农业银行</option>
+                                <option value="CCB">建设银行</option>
+                                <option value="ICBC">工商银行</option>
+                                <option value="CMB">招商银行</option>
+                                <option value="GDB">广发银行</option>
+                                <option value="CIB">兴业银行</option>
+                                <option value="CEB">光大银行</option>
+                                <option value="CITIC">中信银行</option>
+                                <option value="HXB">华夏银行</option>
+                                <option value="CMBC">民生银行</option>
+                                <option value="SPDB">浦发银行</option>
+                                <option value="PAB">平安银行</option>
+                                <option value="BCOM">交通银行</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr class="pt10">
+                        <td>银行卡号</td>
+                        <td>
+                            <input class="input" type="text" placeholder="请输入银行卡号">
+                        </td>
+                    </tr>
+                    <tr class="pt10">
+                        <td>银行地址</td>
+                        <td id="distpicker">
+                            <select class="input input-double" name="province" id="province"><option value="" data-code="">—— 省 ——</option><option value="110000" data-code="110000">北京市</option><option value="120000" data-code="120000">天津市</option><option value="130000" data-code="130000">河北省</option><option value="140000" data-code="140000">山西省</option><option value="150000" data-code="150000">内蒙古</option><option value="210000" data-code="210000">辽宁省</option><option value="220000" data-code="220000">吉林省</option><option value="230000" data-code="230000">黑龙江省</option><option value="310000" data-code="310000">上海市</option><option value="320000" data-code="320000">江苏省</option><option value="330000" data-code="330000">浙江省</option><option value="340000" data-code="340000">安徽省</option><option value="350000" data-code="350000">福建省</option><option value="360000" data-code="360000">江西省</option><option value="370000" data-code="370000">山东省</option><option value="410000" data-code="410000">河南省</option><option value="420000" data-code="420000">湖北省</option><option value="430000" data-code="430000">湖南省</option><option value="440000" data-code="440000">广东省</option><option value="450000" data-code="450000">广西省</option><option value="460000" data-code="460000">海南省</option><option value="500000" data-code="500000">重庆市</option><option value="510000" data-code="510000">四川省</option><option value="520000" data-code="520000">贵州省</option><option value="530000" data-code="530000">云南省</option><option value="540000" data-code="540000">西藏</option><option value="610000" data-code="610000">陕西省</option><option value="620000" data-code="620000">甘肃省</option><option value="630000" data-code="630000">青海省</option><option value="640000" data-code="640000">宁夏</option><option value="650000" data-code="650000">新疆</option></select>
+                            <select class="input input-double" name="city" id="city"><option value="" data-code="">—— 市 ——</option></select>
+                        </td>
+                    </tr>
+                    <tr class="pt10">
+                        <td>支行名称</td>
+                        <td>
+                            <input class="input" type="text" placeholder="请输入支行名称">
+                        </td>
+                    </tr>
+                    <tr class="pt10">
+                        <td>手机号</td>
+                        <td>
+                            <input class="input" type="text" placeholder="请输入银行预留手机号">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>
+                            <input type="button" class="upload-submit" value="确认">
+<!--                             <p class="bank-agreement">
+                                <label>
+                                    <input ms-duplex-checked="agreement" type="checkbox" id="">我已经阅读并同意<a href="" class="cOrange">《快捷支付用户协议》。</a></label>
+                            </p> -->
+                            <p id="dio_error"></p>
+                        </td>
+                    </tr>
+                </tbody></table>
+                <ul class="replace-bank-tip">
+                    <li>温馨提示：</li>
+                    <li>如果您忘记银行卡预留手机号，请与您的发卡银行客服联系，咨询预留手机号。</li>
+                </ul>
+            </div>
+            <!-- 已绑卡的显示 E -->
+            <div class="card_tips">
+                <div class="card_tips_ttl">温馨提示：</div>
+                <p>1.根据国家相关规定，平台严禁信用卡充值和提现；</p>
+                <p>2.汇付充值方式仅适用于购买平台散标，不适用于购买投标产品；</p>
+                <p>3.网银充值方式适用于购买平台投标产品，不适用于购买散标；</p>
+                <p>4.快捷充值方式适用于购买平台投标产品，不适用于购买散标；同时快捷充值方式只允许绑定一张银行卡且要同卡进出；</p>
+                <p class="card_tips_notice">如有问题，请与我们联系。客服电话：4006078787</p>
+            </div>
+        </div>
+        <!-- 绑卡页面 E-->
+    </div>
+</div></div>
+	</body>
+</html>

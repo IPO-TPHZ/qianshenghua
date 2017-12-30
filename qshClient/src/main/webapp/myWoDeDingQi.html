@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>我的定期</title>
+		<link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/center.css">    
+    <link rel="stylesheet" href="css/jquery-ui-1.10.1(1).css">    
+    <link rel="stylesheet" href="css/usercenter.css">
+    <link rel="stylesheet" href="css/ui-dialog.css">
+    <link rel="stylesheet" href="css/custody.css">
+	</head>
+	<body>
+		    <!-- 右侧栏S -->
+    <div class="mod_col_right">
+        <!-- 爱定宝 S -->
+        <div class="mlib">
+            <div class="mlib_title">
+                我的定期
+                <span></span>
+            </div>
+            <!--ms-if-->
+            <div class="mlib_items">
+                <div class="mlib_item mlib_pro">
+                    <p class="mlib_tit"><i class="lib_icon lib_icon1"></i>持有资产（元）</p>
+                    <p class="fa mlib_money">0.00</p>
+                </div>
+                <div class="mlib_item mlib_pro">
+                    <p class="mlib_tit">昨日收益（元）<b class="help-tip"></b>
+                    </p>
+                    <p class="fa mlib_money">0.00</p>
+                    <div class="tip-dialog" style="top:-16px;right:130px;">
+                        <h3>昨日收益计算说明：持有中全部的钱生花投标产品，每日实际获得的收益总和。（以投资金额计算）</h3>
+                        <p>昨日收益：投资金额 x 投标产品年化利率（历史） x 投标产品期限 ÷ 12 ÷ 投资天数（赎回日期 - 计息日期）</p>
+                        <span class="cRed">（注意：已经赎回投标产品不参与计算、计息日期为购买第二天）</span>
+                        <div class="tip">此数据仅供参考，实际收益以具体到账为准。</div>
+                        <i></i>
+                        <b></b>
+                    </div>
+                </div>
+                <div class="mlib_item mlib_pro mlib_item_last">
+                    <p class="mlib_tit"><i class="lib_icon lib_icon3"></i>累计收益（元）</p>
+                    <p class="fa mlib_moneys hide show">0.00</p>
+                </div>
+            </div>
+        </div>
+        <!-- 爱定宝 E -->                    
+        <!-- 日期选择 S -->
+        <div class="mod_date">
+            <span class="mod_date_tit">选择日期 ：</span>
+            <div class="mod_date_picker">
+                <input type="text" placeholder="开始时间" name="dataStart" value="" autocomplete="off" id="date-picker-input-1" class="mod_date_start hasDatepicker">
+                <input type="text" class="mod_date_end hasDatepicker" name="dataEnd" value="" autocomplete="off" id="date-picker-input-2" placeholder="结束时间">
+            </div>
+            <div class="mod_date_sel">
+                <a href="javascript:;">一个月内</a>
+                <a href="javascript:;">三个月内</a>
+                <a href="javascript:;">半年内</a>
+            </div>
+        </div>
+        <!-- 日期选择 E -->
+        <!-- 列表 S -->
+        <div class="mlib_list">
+            <div class="mod_loading" style="display: none;"><img class="mod_loading_img" src="./个人中心_我的定期_files/loader.gif" alt="">拼命加载中...</div>
+            <div class="mlib_list_cont hide show">
+                 <table id="data_list">
+                 <thead style="display: table-header-group;">
+	                	<tr>
+	                        <th>订单号</th>
+	                        <th>购买期数</th>
+	                        <th>购买时间</th>
+	                        <th>购买金额（元）</th>
+	                        <th>历史年化利率</th>
+                            <th>本息收益</th>
+	                        <th>订单状态</th>
+	                        <th>操作</th>
+<!-- 	                        <th>协议</th>
+	                        <th>购买凭证</th>
+                            <th>投资详情</th> -->
+                            <th>详情</th>
+	                    </tr> 
+	                    
+                 </thead>
+                 <thead style="display: none;">
+                    <tr>
+                        <th>订单号</th>
+                        <th>购买时间</th>
+                        <th>起投金额</th>
+                        <th>最近复投金额（元）</th>
+                        <th>当前年化利率</th>
+                        <th>下次加息</th>
+                        <th>订单状态</th>
+                        <th>操作</th>
+                        <th>协议</th>
+                    </tr>                   
+                 </thead>
+                 <tbody><tr><td colspan="10" align="center">查无记录</td></tr></tbody>         
+                </table>
+            </div>
+
+            <!-- 分页 S -->
+            <div class="mod_page hide" id="pagenav">
+
+                <div avalonctrl="pager939466156853" style="display: block;"><div class="mod_page_list" onselectstart="return false;" unselectable="on" style="display: none;">
+    <a href="javascript:;" class="mod_page_first oni-state-disabled" title="跳转到 上一页">上一页</a>
+    <a href="javascript:;" title="当前页" class="cur" style="display: none;">1</a>
+    <!--ms-if-->
+    <!--repeat880846288004--><!--repeat880846288004:end-->
+    <!--ms-if-->
+    <a href="javascript:;" title="跳转到 最后一页" style="display: inline-block;">0</a>
+    <a href="javascript:;" class="mod_page_last" title="跳转到 下一页">下一页</a>
+
+</div>
+<div class="mod_page_jump" style="display: none;">
+    <input type="text" value="到第二页" data-duplex-event="change">
+    <a href="javascript:;">跳转</a>
+</div>
+</div>
+            </div>
+            <!-- 分页 E-->
+            <div class="diol_pwd" id="slayer" style="display: none;width:800px;">
+                <div class="dio_close"></div>
+                <div class="diol_title">投资详情</div>
+                <div class="form_main" style="width:780px;padding:10px;">
+                    <table width="100%" class="record_tables">
+                        <tbody><tr>
+                            <th>名称</th>
+                            <th>投资金额(元)</th>
+                            <th>匹配时间</th>
+                            <th>逾期预警(天)</th>
+                            <th>还款进度</th>
+                            <th>状态</th>
+                            <th>借款协议</th>
+                        </tr>
+                        <!--repeat806907645146--><!--repeat806907645146:end-->
+                        <!--ms-if-->
+                    </tbody></table>
+                    <div class="mod_page" style="display: none;">
+                        <div avalonctrl="pagers" style="display: block;"><div class="mod_page_list" onselectstart="return false;" unselectable="on" style="display: none;">
+    <a href="javascript:;" class="mod_page_first oni-state-disabled" title="跳转到 上一页">上一页</a>
+    <a href="javascript:;" title="当前页" class="cur" style="display: none;">1</a>
+    <!--ms-if-->
+    <!--repeat038150273517--><!--repeat038150273517:end-->
+    <!--ms-if-->
+    <a href="javascript:;" title="跳转到 最后一页" style="display: inline-block;">0</a>
+    <a href="javascript:;" class="mod_page_last" title="跳转到 下一页">下一页</a>
+
+</div>
+<!--ms-if-->
+</div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <!-- 列表 E -->
+    </div>
+	</body>
+</html>
