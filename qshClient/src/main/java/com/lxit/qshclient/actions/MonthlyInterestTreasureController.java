@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 public class MonthlyInterestTreasureController {
 	@RequestMapping("/monthly")
 	public String monthlyr() {
-		return "yuelibao.html";
+		return "yanglaobao.html";
 	}
 	
 	@ResponseBody

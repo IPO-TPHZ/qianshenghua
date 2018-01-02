@@ -48,6 +48,7 @@ function _error(invest,cc) {
 	var check = $('#checkbox').attr("checked");
 	var money = $('#money').val();
 	var smsMobile = $('#smsMobile').val();
+	console.log(money);
 	if (money < invest) {
 		zeroModal.error('最低起投资金为' + invest + '元!');
 	}else if(cc == 3){
@@ -65,8 +66,7 @@ function _error(invest,cc) {
 	} else {
 		alert("弹出投资框")
 		// 投标弹框显示
-		$.gDialog
-				.alert(
+		$.gDialog.alert(
 						'<div i="dialog" class="ui-dialog" id="thisDia">'
 								+ '<div class="ui-dialog-arrow-a"></div>'
 								+ '<div class="ui-dialog-arrow-b"></div>'
