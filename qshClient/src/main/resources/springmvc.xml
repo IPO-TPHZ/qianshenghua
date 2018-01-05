@@ -49,6 +49,7 @@
 	
 	<mvc:view-controller path="/myWoDeZhangHu.html" view-name="myWoDeZhangHu.html" />	
 	<mvc:view-controller path="/personCenter" view-name="myGeRenZhongXin.html" />
+	<mvc:view-controller path="/jiaXinBao" view-name="jiaxinbaoqiqi.html" />
 	
 	<!-- <mvc:resources mapping="/**"  location="/myWoDeZhangHu.html"/> -->
     
